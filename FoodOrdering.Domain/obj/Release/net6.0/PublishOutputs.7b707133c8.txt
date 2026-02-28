@@ -1,0 +1,16 @@
+D:\source\repos\Ordering\FoodOrdering\publish\FoodOrdering.Domain.dll
+D:\source\repos\Ordering\FoodOrdering\publish\FoodOrdering.Domain.runtimeconfig.json
+D:\source\repos\Ordering\FoodOrdering\publish\FoodOrdering.Domain.pdb
+D:\source\repos\Ordering\FoodOrdering\publish\Microsoft.EntityFrameworkCore.dll
+D:\source\repos\Ordering\FoodOrdering\publish\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\source\repos\Ordering\FoodOrdering\publish\Microsoft.Extensions.Caching.Abstractions.dll
+D:\source\repos\Ordering\FoodOrdering\publish\Microsoft.Extensions.Caching.Memory.dll
+D:\source\repos\Ordering\FoodOrdering\publish\Microsoft.Extensions.DependencyInjection.dll
+D:\source\repos\Ordering\FoodOrdering\publish\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\source\repos\Ordering\FoodOrdering\publish\Microsoft.Extensions.Logging.dll
+D:\source\repos\Ordering\FoodOrdering\publish\Microsoft.Extensions.Logging.Abstractions.dll
+D:\source\repos\Ordering\FoodOrdering\publish\Microsoft.Extensions.Options.dll
+D:\source\repos\Ordering\FoodOrdering\publish\Microsoft.Extensions.Primitives.dll
+D:\source\repos\Ordering\FoodOrdering\publish\System.Collections.Immutable.dll
+D:\source\repos\Ordering\FoodOrdering\publish\System.Diagnostics.DiagnosticSource.dll
+D:\source\repos\Ordering\FoodOrdering\publish\FoodOrdering.Domain.deps.json

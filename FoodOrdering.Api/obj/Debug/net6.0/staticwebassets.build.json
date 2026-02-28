@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "9+KrBjorOpvvWL1FiCXykwiRuzj5g7CJlkOlFeY/nl8=",
+  "Source": "FoodOrdering.Api",
+  "BasePath": "_content/FoodOrdering.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

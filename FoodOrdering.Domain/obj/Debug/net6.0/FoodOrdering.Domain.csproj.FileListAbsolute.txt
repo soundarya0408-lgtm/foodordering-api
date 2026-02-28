@@ -1,0 +1,14 @@
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Domain\bin\Debug\net6.0\FoodOrdering.Domain.deps.json
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Domain\bin\Debug\net6.0\FoodOrdering.Domain.dll
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Domain\bin\Debug\net6.0\FoodOrdering.Domain.pdb
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Domain\obj\Debug\net6.0\FoodOrdering.Domain.csproj.AssemblyReference.cache
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Domain\obj\Debug\net6.0\FoodOrdering.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Domain\obj\Debug\net6.0\FoodOrdering.Domain.AssemblyInfoInputs.cache
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Domain\obj\Debug\net6.0\FoodOrdering.Domain.AssemblyInfo.cs
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Domain\obj\Debug\net6.0\FoodOrdering.Domain.csproj.CoreCompileInputs.cache
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Domain\obj\Debug\net6.0\FoodOrdering.Domain.dll
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Domain\obj\Debug\net6.0\refint\FoodOrdering.Domain.dll
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Domain\obj\Debug\net6.0\FoodOrdering.Domain.pdb
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Domain\obj\Debug\net6.0\ref\FoodOrdering.Domain.dll
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Domain\bin\Debug\net6.0\FoodOrdering.Domain.runtimeconfig.json
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Domain\obj\Debug\net6.0\FoodOrdering.Domain.genruntimeconfig.cache

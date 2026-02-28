@@ -1,0 +1,17 @@
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\bin\Release\net6.0\FoodOrdering.Application.deps.json
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\bin\Release\net6.0\FoodOrdering.Application.runtimeconfig.json
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\bin\Release\net6.0\FoodOrdering.Application.dll
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\bin\Release\net6.0\FoodOrdering.Application.pdb
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\bin\Release\net6.0\FoodOrdering.Domain.dll
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\bin\Release\net6.0\FoodOrdering.Domain.pdb
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\obj\Release\net6.0\FoodOrdering.Application.csproj.AssemblyReference.cache
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\obj\Release\net6.0\FoodOrdering.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\obj\Release\net6.0\FoodOrdering.Application.AssemblyInfoInputs.cache
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\obj\Release\net6.0\FoodOrdering.Application.AssemblyInfo.cs
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\obj\Release\net6.0\FoodOrdering.Application.csproj.CoreCompileInputs.cache
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\obj\Release\net6.0\FoodOrdering.Application.csproj.CopyComplete
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\obj\Release\net6.0\FoodOrdering.Application.dll
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\obj\Release\net6.0\refint\FoodOrdering.Application.dll
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\obj\Release\net6.0\FoodOrdering.Application.pdb
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\obj\Release\net6.0\FoodOrdering.Application.genruntimeconfig.cache
+D:\source\repos\Ordering\FoodOrdering\FoodOrdering.Application\obj\Release\net6.0\ref\FoodOrdering.Application.dll
