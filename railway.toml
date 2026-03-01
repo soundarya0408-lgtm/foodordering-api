@@ -1,3 +1,8 @@
 [build]
   builder = "DOCKERFILE"
-  dockerfilePath = "./FoodOrdering.Api/Dockerfile"
+  dockerfilePath = "Dockerfile"
+
+[deploy]
+  startCommand = "dotnet FoodOrdering.Api.dll"
+  restartPolicyType = "ON_FAILURE"
+  restartPolicyMaxRetries = 3

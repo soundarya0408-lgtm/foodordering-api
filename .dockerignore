@@ -1,16 +1,8 @@
-# Ignore build artifacts
 **/bin/
 **/obj/
-
-# VS files
 .vs/
-.vsconfig
 .vscode/
-
-# Docker
-Dockerfile*
-docker-compose*
+**/.git/
+*.md
 .dockerignore
-
-# Logs
-*.log
+docker-compose*
