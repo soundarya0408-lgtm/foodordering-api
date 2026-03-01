@@ -86,11 +86,14 @@ builder.Services.AddAuthentication("Bearer")
 builder.Services.AddAuthorization();
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+//FIX (Swagger always enabled)
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "FoodOrdering API V1");
+    c.RoutePrefix = "swagger";
+});
+
 
 app.UseCors("AllowFrontend");
 app.UseHttpsRedirection();
