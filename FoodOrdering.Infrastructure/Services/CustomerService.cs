@@ -27,7 +27,8 @@ public class CustomerService : ICustomerService
             Name = request.Name.Trim(),
             MobileNumber = request.MobileNumber.Trim(),
             Email = request.Email?.Trim(),
-            Address = request.Address?.Trim()
+            Address = request.Address?.Trim(),
+            DOB = request.DOB
         };
 
         _dbContext.Customers.Add(customer);
@@ -39,7 +40,8 @@ public class CustomerService : ICustomerService
             Name = customer.Name,
             MobileNumber = customer.MobileNumber,
             Email = customer.Email,
-            Address = customer.Address
+            Address = customer.Address,
+            DOB = customer.DOB
         };
     }
 
@@ -53,6 +55,7 @@ public class CustomerService : ICustomerService
                 MobileNumber = c.MobileNumber,
                 Email = c.Email,
                 Address = c.Address,
+                DOB = c.DOB,
                 CreatedAt = c.CreatedAt,                
                 CreatedBy = c.CreatedBy,
                 UpdatedBy = c.UpdatedBy,
@@ -68,6 +71,9 @@ public class CustomerService : ICustomerService
 
         customer.Name = customerDto.Name;
         customer.MobileNumber = customerDto.MobileNumber;
+        customer.Email = customerDto.Email;
+        customer.Address = customerDto.Address;
+        customer.DOB = customerDto.DOB;
         await _dbContext.SaveChangesAsync();
         return true;
     }

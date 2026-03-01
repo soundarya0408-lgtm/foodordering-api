@@ -9,6 +9,7 @@ export interface Customer {
   email: string;
   address: string;
   dob: string;
+  createdBy: string;
 }
 
 @Injectable({ providedIn: 'root' })
