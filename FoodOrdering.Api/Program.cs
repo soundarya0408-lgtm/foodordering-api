@@ -6,6 +6,7 @@ using FoodOrdering.Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -46,7 +47,7 @@ builder.Services.AddSwaggerGen(c =>
 // DB Context
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<FoodOrderingDbContext>(options =>
-    options.UseSqlServer(connectionString)
+    options.UseSqlite(connectionString)
     .AddInterceptors(new AuditInterceptor()));
 
 // Services
@@ -100,5 +101,13 @@ app.UseHttpsRedirection();
 app.UseAuthentication();     
 app.UseAuthorization();
 app.MapControllers();
+
+
+// Auto apply migrations on startup
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<FoodOrderingDbContext>();
+    db.Database.Migrate();
+}
 
 app.Run();
