@@ -45,15 +45,29 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+// Services
+builder.Services.AddScoped<ICustomerService, CustomerService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<AuditInterceptor>();
+
 // DB Context
+
+//Prod:
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<FoodOrderingDbContext>(options =>
     options.UseSqlite(connectionString)
     .AddInterceptors(new AuditInterceptor()));
 
-// Services
-builder.Services.AddScoped<ICustomerService, CustomerService>();
-builder.Services.AddScoped<IAuthService, AuthService>();
+//Local:
+//var folder = Path.Combine(AppContext.BaseDirectory);
+//if (!Directory.Exists(folder))
+//    Directory.CreateDirectory(folder);
+//var dbPath = Path.Combine(AppContext.BaseDirectory, "foodordering.db");
+//builder.Services.AddDbContext<FoodOrderingDbContext>(options =>
+//    options.UseSqlite($"Data Source={dbPath}")
+//    .AddInterceptors(new AuditInterceptor()));
+
+
 
 // CORS
 builder.Services.AddCors(options =>
@@ -113,11 +127,20 @@ using (var scope = app.Services.CreateScope())
     // Seed default customer if empty
     if (!db.Customers.Any())
     {
-        db.Customers.Add(new Customer
+        db.Customers.AddRange(new Customer
         {
             Name = "Soundarya",
             MobileNumber = "9876543210",
             Email = "sound@example.com",
+            Address = "Chennai",
+            CreatedAt = DateTime.UtcNow,
+            CreatedBy = "System"
+        },
+        new Customer
+        {
+            Name = "Shiranjeevi",
+            MobileNumber = "9876543210",
+            Email = "shira@example.com",
             Address = "Chennai",
             CreatedAt = DateTime.UtcNow,
             CreatedBy = "System"

@@ -1,0 +1,114 @@
+<div class="page-container">
+
+  <!-- Header -->
+  <mat-card class="header-card">
+    <div class="header-row">
+      <h2>🍔 Customers</h2>
+      <div>
+        <button mat-raised-button color="primary" (click)="openAddForm()">
+          <mat-icon>add</mat-icon> Add Customer
+        </button>
+        <button mat-button color="warn" (click)="logout()">
+          <mat-icon>logout</mat-icon> Logout
+        </button>
+      </div>
+    </div>
+  </mat-card>
+
+  <!-- Add/Edit Form -->
+  <mat-card class="form-card" *ngIf="showForm">
+    <mat-card-title>{{ isEditing ? 'Edit Customer' : 'Add Customer' }}</mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="customerForm" (ngSubmit)="saveCustomer()" class="customer-form">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Mobile Number</mat-label>
+          <input matInput formControlName="mobileNumber" maxlength="10"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="address"/>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Date of Birth</mat-label>
+          <input matInput formControlName="dob" type="date"/>
+        </mat-form-field>
+
+        <div class="form-actions">
+          <button mat-raised-button color="primary" type="submit"
+                  [disabled]="customerForm.invalid">
+            {{ isEditing ? 'Update' : 'Save' }}
+          </button>
+          <button mat-button type="button" (click)="showForm = false">
+            Cancel
+          </button>
+        </div>
+
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Loading -->
+  <div class="spinner-container" *ngIf="isLoading">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <!-- Grid -->
+  <mat-card *ngIf="!isLoading">
+    <table mat-table [dataSource]="customers" class="full-width">
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let c">{{ c.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="mobileNumber">
+        <th mat-header-cell *matHeaderCellDef>Mobile</th>
+        <td mat-cell *matCellDef="let c">{{ c.mobileNumber }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let c">{{ c.email }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef>Address</th>
+        <td mat-cell *matCellDef="let c">{{ c.address }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <td mat-cell *matCellDef="let c">
+          <button mat-icon-button color="primary" (click)="openEditForm(c)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteCustomer(c.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+
+    <p class="no-data" *ngIf="customers.length === 0">
+      No customers found. Add one! 👆
+    </p>
+  </mat-card>
+
+</div>

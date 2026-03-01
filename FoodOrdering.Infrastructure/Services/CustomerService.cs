@@ -68,7 +68,17 @@ public class CustomerService : ICustomerService
 
         customer.Name = customerDto.Name;
         customer.MobileNumber = customerDto.MobileNumber;
-        _dbContext.SaveChanges();
+        await _dbContext.SaveChangesAsync();
+        return true;
+    }
+
+    public async Task<bool> DeleteCustomer(int customerId)
+    {
+        var customer = await _dbContext.Customers.FindAsync(customerId);
+        if (customer == null) return false;
+
+        _dbContext.Customers.Remove(customer);
+        await _dbContext.SaveChangesAsync();
         return true;
     }
 }

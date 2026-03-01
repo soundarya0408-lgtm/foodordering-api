@@ -24,9 +24,9 @@ public class CustomersController : ControllerBase
     }
 
     [HttpPut("{id}")]
-    public async Task<ActionResult<CustomerDto>> Update(int Id, [FromBody] CustomerDto customerDto)
+    public async Task<ActionResult<CustomerDto>> Update(int id, [FromBody] CustomerDto customerDto)
     {
-        bool result = await _customerService.UpdateCustomerInfo(Id, customerDto);
+        bool result = await _customerService.UpdateCustomerInfo(id, customerDto);
         if (!result) return NotFound();
         return Ok(result);
     }
@@ -35,5 +35,12 @@ public class CustomersController : ControllerBase
     {
         var customers = await _customerService.GetCustomersAsync();
         return Ok(customers);
+    }
+    [HttpDelete("{id}")]
+    public async Task<ActionResult<bool>> DeleteCustomer(int id)
+    {
+        bool result = await _customerService.DeleteCustomer(id);
+        if(!result) return NotFound();
+        return Ok(result);
     }
 }
