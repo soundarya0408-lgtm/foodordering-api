@@ -1,5 +1,6 @@
 using FoodOrdering.Application.Auth;
 using FoodOrdering.Application.Customers;
+using FoodOrdering.Domain.Entities;
 using FoodOrdering.Infrastructure.Interceptors;
 using FoodOrdering.Infrastructure.Persistence;
 using FoodOrdering.Infrastructure.Services;
@@ -108,6 +109,22 @@ using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<FoodOrderingDbContext>();
     db.Database.Migrate();
+
+    // Seed default customer if empty
+    if (!db.Customers.Any())
+    {
+        db.Customers.Add(new Customer
+        {
+            Name = "Soundarya",
+            MobileNumber = "9876543210",
+            Email = "sound@example.com",
+            Address = "Chennai",
+            CreatedAt = DateTime.UtcNow,
+            CreatedBy = "System"
+        });
+        db.SaveChanges();
+    }
+}
 }
 
 app.Run();
